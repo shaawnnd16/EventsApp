@@ -15,11 +15,16 @@ struct EmbeddedEvents: Decodable {
     let events: [Event]
 }
 
-struct Event: Identifiable, Decodable {
+// Make Event conform to Equatable
+struct Event: Identifiable, Decodable, Equatable {
     let id: String
     let name: String
     let dates: EventDates
     let _embedded: EventVenues
+    
+    static func ==(lhs: Event, rhs: Event) -> Bool {
+        return lhs.id == rhs.id // Compare events based on their unique ID
+    }
 }
 
 struct EventDates: Decodable {
@@ -38,11 +43,18 @@ struct EventVenues: Decodable {
 struct Venue: Decodable {
     let name: String
     let city: City
+    let location: Location
 }
 
 struct City: Decodable {
     let name: String
 }
+
+struct Location: Decodable {
+    let latitude: String
+    let longitude: String
+}
+
 
 
 

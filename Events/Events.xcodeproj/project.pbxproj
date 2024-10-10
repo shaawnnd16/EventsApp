@@ -7,30 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0B947F2CB781E7003B3159 /* VenueAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B947E2CB781E7003B3159 /* VenueAnnotation.swift */; };
 		CE8373312CB768B50088D8E6 /* EventsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373302CB768B50088D8E6 /* EventsApp.swift */; };
-		CE8373332CB768B50088D8E6 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373322CB768B50088D8E6 /* EventModel.swift */; };
+		CE8373332CB768B50088D8E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373322CB768B50088D8E6 /* ContentView.swift */; };
 		CE8373352CB768B60088D8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8373342CB768B60088D8E6 /* Assets.xcassets */; };
 		CE8373382CB768B70088D8E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8373372CB768B70088D8E6 /* Preview Assets.xcassets */; };
-		CE83733F2CB768F30088D8E6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83733E2CB768F30088D8E6 /* LocationManager.swift */; };
-		CE8373412CB7690B0088D8E6 /* EventFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373402CB7690B0088D8E6 /* EventFetcher.swift */; };
-		CE8373432CB7691E0088D8E6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373422CB7691E0088D8E6 /* MapView.swift */; };
-		CE8373452CB769350088D8E6 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373442CB769350088D8E6 /* EventListView.swift */; };
-		CE8373472CB7694B0088D8E6 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373462CB7694B0088D8E6 /* PersistenceController.swift */; };
-		CE8373492CB7695F0088D8E6 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373482CB7695F0088D8E6 /* ErrorHandling.swift */; };
+		CE83733F2CB768F30088D8E6 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83733E2CB768F30088D8E6 /* EventRow.swift */; };
+		CE8373412CB7690B0088D8E6 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373402CB7690B0088D8E6 /* EventDetailView.swift */; };
+		CE8373432CB7691E0088D8E6 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373422CB7691E0088D8E6 /* EventModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0B947E2CB781E7003B3159 /* VenueAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAnnotation.swift; sourceTree = "<group>"; };
 		CE83732D2CB768B50088D8E6 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8373302CB768B50088D8E6 /* EventsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApp.swift; sourceTree = "<group>"; };
-		CE8373322CB768B50088D8E6 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		CE8373322CB768B50088D8E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE8373342CB768B60088D8E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8373372CB768B70088D8E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE83733E2CB768F30088D8E6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		CE8373402CB7690B0088D8E6 /* EventFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFetcher.swift; sourceTree = "<group>"; };
-		CE8373422CB7691E0088D8E6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		CE8373442CB769350088D8E6 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
-		CE8373462CB7694B0088D8E6 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		CE8373482CB7695F0088D8E6 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		CE83733E2CB768F30088D8E6 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		CE8373402CB7690B0088D8E6 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		CE8373422CB7691E0088D8E6 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				CE8373302CB768B50088D8E6 /* EventsApp.swift */,
-				CE8373322CB768B50088D8E6 /* EventModel.swift */,
-				CE83733E2CB768F30088D8E6 /* LocationManager.swift */,
-				CE8373402CB7690B0088D8E6 /* EventFetcher.swift */,
-				CE8373422CB7691E0088D8E6 /* MapView.swift */,
-				CE8373442CB769350088D8E6 /* EventListView.swift */,
-				CE8373462CB7694B0088D8E6 /* PersistenceController.swift */,
-				CE8373482CB7695F0088D8E6 /* ErrorHandling.swift */,
+				CE8373322CB768B50088D8E6 /* ContentView.swift */,
+				CE83733E2CB768F30088D8E6 /* EventRow.swift */,
+				CE8373402CB7690B0088D8E6 /* EventDetailView.swift */,
+				CE8373422CB7691E0088D8E6 /* EventModel.swift */,
+				CE0B947E2CB781E7003B3159 /* VenueAnnotation.swift */,
 				CE8373342CB768B60088D8E6 /* Assets.xcassets */,
 				CE8373362CB768B70088D8E6 /* Preview Content */,
 			);
@@ -155,14 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8373412CB7690B0088D8E6 /* EventFetcher.swift in Sources */,
-				CE8373472CB7694B0088D8E6 /* PersistenceController.swift in Sources */,
-				CE8373452CB769350088D8E6 /* EventListView.swift in Sources */,
-				CE8373332CB768B50088D8E6 /* EventModel.swift in Sources */,
-				CE8373432CB7691E0088D8E6 /* MapView.swift in Sources */,
-				CE8373492CB7695F0088D8E6 /* ErrorHandling.swift in Sources */,
+				CE8373412CB7690B0088D8E6 /* EventDetailView.swift in Sources */,
+				CE8373332CB768B50088D8E6 /* ContentView.swift in Sources */,
+				CE8373432CB7691E0088D8E6 /* EventModel.swift in Sources */,
 				CE8373312CB768B50088D8E6 /* EventsApp.swift in Sources */,
-				CE83733F2CB768F30088D8E6 /* LocationManager.swift in Sources */,
+				CE83733F2CB768F30088D8E6 /* EventRow.swift in Sources */,
+				CE0B947F2CB781E7003B3159 /* VenueAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,25 +5,37 @@
 //  Created by Shawn De Alwis on 10/10/2024.
 //
 
-import MapKit
-import CoreLocation
 import SwiftUI
 
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    private let locationManager = CLLocationManager()
-    @Published var region = MKCoordinateRegion()
+struct EventRow: View {
+    var event: Event
 
-    override init() {
-        super.init()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    }
+    var body: some View {
+        HStack {
+            // Add an SF Symbol as an icon
+            Image(systemName: "customIcon") // You can use different icons here based on event type
+                .resizable()
+                .frame(width: 40, height: 40)
+                .padding()
 
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+            VStack(alignment: .leading) {
+                Text(event.name)
+                    .font(.headline)
+                Text(event._embedded.venues.first?.name ?? "Unknown Venue")
+                    .font(.subheadline)
+                if let localTime = event.dates.start.localTime {
+                    Text("\(event.dates.start.localDate) at \(localTime)")
+                        .font(.subheadline)
+                } else {
+                    Text("\(event.dates.start.localDate)")
+                        .font(.subheadline)
+                }
+            }
         }
     }
 }
+
+
+
+
 

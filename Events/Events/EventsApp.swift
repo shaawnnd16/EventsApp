@@ -8,14 +8,13 @@
 import SwiftUI
 
 @main
-struct EventsApp: App {
-    let persistenceController = PersistenceController.shared
-
+struct NeighborhoodEventsTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            EventListView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ContentView()
         }
     }
 }
+
+
 
