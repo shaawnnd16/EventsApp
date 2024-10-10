@@ -11,7 +11,7 @@ class EventFetcher: ObservableObject {
     @Published var events = [EventDetail]()
 
     func fetchEvents() {
-        guard let url = URL(string: "https://www.eventbriteapi.com/v3/events/search/?location.latitude=YOUR_LAT&location.longitude=YOUR_LONG&token=YOUR_API_TOKEN") else {
+        guard let url = URL(string: "https://www.eventbriteapi.com/v3/events/search/?location.latitude=37.7749&location.longitude=-122.4194&token=ILIXHAYV5E3ARQ3LDO") else {
             return
         }
         
@@ -38,4 +38,5 @@ class EventFetcher: ObservableObject {
         }.resume()
     }
 }
+
 

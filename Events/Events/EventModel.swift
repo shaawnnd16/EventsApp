@@ -1,49 +1,49 @@
 //
-//  ContentView.swift
+//  MapView.swift
 //  Events
 //
 //  Created by Shawn De Alwis on 10/10/2024.
 //
 
 import Foundation
-import CoreData
 
-// CoreData Model for Events
-struct Event: Identifiable {
-    var id: UUID
-    var title: String
-    var date: Date
-    var location: String
-    var favorited: Bool
+struct TicketmasterResponse: Decodable {
+    let _embedded: EmbeddedEvents
 }
 
-// Eventbrite API Response Structure
-struct EventResponse: Codable {
-    var events: [EventDetail]
+struct EmbeddedEvents: Decodable {
+    let events: [Event]
 }
 
-struct EventDetail: Codable, Identifiable {
-    var id: String
-    var name: EventName
-    var start: EventTime
-    var venue: Venue
-
-    struct EventName: Codable {
-        var text: String
-    }
-
-    struct EventTime: Codable {
-        var local: String
-    }
-
-    struct Venue: Codable {
-        var address: VenueAddress
-        var latitude: String
-        var longitude: String
-
-        struct VenueAddress: Codable {
-            var localized_address_display: String
-        }
-    }
+struct Event: Identifiable, Decodable {
+    let id: String
+    let name: String
+    let dates: EventDates
+    let _embedded: EventVenues
 }
+
+struct EventDates: Decodable {
+    let start: EventStart
+}
+
+struct EventStart: Decodable {
+    let localDate: String
+    let localTime: String?
+}
+
+struct EventVenues: Decodable {
+    let venues: [Venue]
+}
+
+struct Venue: Decodable {
+    let name: String
+    let city: City
+}
+
+struct City: Decodable {
+    let name: String
+}
+
+
+
 
