@@ -9,12 +9,18 @@ import SwiftUI
 
 @main
 struct NeighborhoodEventsTrackerApp: App {
+    // StateObject to manage shared FavoritesManager across views
+    @StateObject private var favorites = FavoritesManager()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
+                .environmentObject(favorites) // Pass the shared favorites manager to all views
         }
     }
 }
+
+
 
 
 

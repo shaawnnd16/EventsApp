@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CE0B947F2CB781E7003B3159 /* VenueAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B947E2CB781E7003B3159 /* VenueAnnotation.swift */; };
+		CE7873702CBB2D060055206C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78736F2CBB2D060055206C /* MainTabView.swift */; };
+		CE7873722CBB2D5B0055206C /* MapViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7873712CBB2D5B0055206C /* MapViewScreen.swift */; };
+		CE7873742CBB31580055206C /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7873732CBB31580055206C /* FavoritesScreen.swift */; };
+		CE7873782CBB54BC0055206C /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7873772CBB54BC0055206C /* FilterView.swift */; };
+		CE78737A2CBB55EF0055206C /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7873792CBB55EF0055206C /* FavoritesManager.swift */; };
+		CE78737C2CBB56A40055206C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78737B2CBB56A40055206C /* FavoritesView.swift */; };
+		CE78737E2CBB63970055206C /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78737D2CBB63970055206C /* EventService.swift */; };
+		CE7873802CBB6AFC0055206C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78737F2CBB6AFC0055206C /* MapView.swift */; };
+		CE7873822CBB6BDF0055206C /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7873812CBB6BDF0055206C /* LocationAnnotation.swift */; };
 		CE8373312CB768B50088D8E6 /* EventsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373302CB768B50088D8E6 /* EventsApp.swift */; };
 		CE8373332CB768B50088D8E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8373322CB768B50088D8E6 /* ContentView.swift */; };
 		CE8373352CB768B60088D8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8373342CB768B60088D8E6 /* Assets.xcassets */; };
@@ -19,6 +28,15 @@
 
 /* Begin PBXFileReference section */
 		CE0B947E2CB781E7003B3159 /* VenueAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAnnotation.swift; sourceTree = "<group>"; };
+		CE78736F2CBB2D060055206C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		CE7873712CBB2D5B0055206C /* MapViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewScreen.swift; sourceTree = "<group>"; };
+		CE7873732CBB31580055206C /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
+		CE7873772CBB54BC0055206C /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		CE7873792CBB55EF0055206C /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		CE78737B2CBB56A40055206C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		CE78737D2CBB63970055206C /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		CE78737F2CBB6AFC0055206C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CE7873812CBB6BDF0055206C /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
 		CE83732D2CB768B50088D8E6 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8373302CB768B50088D8E6 /* EventsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApp.swift; sourceTree = "<group>"; };
 		CE8373322CB768B50088D8E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,9 +78,18 @@
 			isa = PBXGroup;
 			children = (
 				CE8373302CB768B50088D8E6 /* EventsApp.swift */,
+				CE7873732CBB31580055206C /* FavoritesScreen.swift */,
+				CE78737B2CBB56A40055206C /* FavoritesView.swift */,
+				CE78736F2CBB2D060055206C /* MainTabView.swift */,
 				CE8373322CB768B50088D8E6 /* ContentView.swift */,
+				CE78737D2CBB63970055206C /* EventService.swift */,
+				CE7873712CBB2D5B0055206C /* MapViewScreen.swift */,
+				CE78737F2CBB6AFC0055206C /* MapView.swift */,
+				CE7873812CBB6BDF0055206C /* LocationAnnotation.swift */,
+				CE7873772CBB54BC0055206C /* FilterView.swift */,
 				CE83733E2CB768F30088D8E6 /* EventRow.swift */,
 				CE8373402CB7690B0088D8E6 /* EventDetailView.swift */,
+				CE7873792CBB55EF0055206C /* FavoritesManager.swift */,
 				CE8373422CB7691E0088D8E6 /* EventModel.swift */,
 				CE0B947E2CB781E7003B3159 /* VenueAnnotation.swift */,
 				CE8373342CB768B60088D8E6 /* Assets.xcassets */,
@@ -95,6 +122,8 @@
 			dependencies = (
 			);
 			name = Events;
+			packageProductDependencies = (
+			);
 			productName = Events;
 			productReference = CE83732D2CB768B50088D8E6 /* Events.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +152,8 @@
 				Base,
 			);
 			mainGroup = CE8373242CB768B50088D8E6;
+			packageReferences = (
+			);
 			productRefGroup = CE83732E2CB768B50088D8E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,12 +180,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7873782CBB54BC0055206C /* FilterView.swift in Sources */,
 				CE8373412CB7690B0088D8E6 /* EventDetailView.swift in Sources */,
+				CE78737C2CBB56A40055206C /* FavoritesView.swift in Sources */,
+				CE7873742CBB31580055206C /* FavoritesScreen.swift in Sources */,
 				CE8373332CB768B50088D8E6 /* ContentView.swift in Sources */,
+				CE78737E2CBB63970055206C /* EventService.swift in Sources */,
 				CE8373432CB7691E0088D8E6 /* EventModel.swift in Sources */,
+				CE7873802CBB6AFC0055206C /* MapView.swift in Sources */,
 				CE8373312CB768B50088D8E6 /* EventsApp.swift in Sources */,
+				CE78737A2CBB55EF0055206C /* FavoritesManager.swift in Sources */,
+				CE7873702CBB2D060055206C /* MainTabView.swift in Sources */,
 				CE83733F2CB768F30088D8E6 /* EventRow.swift in Sources */,
 				CE0B947F2CB781E7003B3159 /* VenueAnnotation.swift in Sources */,
+				CE7873722CBB2D5B0055206C /* MapViewScreen.swift in Sources */,
+				CE7873822CBB6BDF0055206C /* LocationAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
