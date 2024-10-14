@@ -1,9 +1,3 @@
-The Neighborhood Events Tracker app is designed to help users discover and save local events happening in their area. It provides an intuitive interface with multiple features such as browsing upcoming events, viewing event details, saving favorite events, and exploring event locations on an interactive map. The app integrates with the Ticketmaster API to fetch events and uses Firebase Firestore to manage and store user-favorited events in the cloud.
+Neighborhood Events Tracker 
 
-Key features include:
-
-Event Discovery: Users can explore events happening this month, filter them by categories like Music, Sports, or Networking, and view detailed information such as the event's date, location, and description.
-Map Integration: Users can explore event locations using MapKit, viewing venue details and getting directions.
-Favorite Events Management: Users can favorite or unfavorite events, and these favorites are stored in Firebase Firestore, ensuring access from any device.
-Firebase Integration: The app uses Firebase for cloud-based data management, saving favorited events in Firestore, enabling real-time sync across devices, and allowing users to access their favorites even after reinstalling the app.
-This combination of features makes the app an efficient tool for staying updated on local events while also leveraging cloud technology for seamless user experiences across devices.
+Purpose: A location-based app that shows local events, meetups, and activities. Features: Local Data Management: Save event preferences, favorited events, and user-generated events using CoreData. Cloud Data Management: Sync events across users using CloudKit, allowing event sharing and RSVPs. Network & APIs: Fetch local events and activities using Eventbrite API or similar services. Core Location & MapKit: Display events on a map, provide directions, and use location services to suggest nearby events. Advanced JSON Parsing: Parse event details, times, and locations from an API. UI/UX: Interactive map with event filters (date, category). Error Handling: Display user-friendly messages if an event is unavailable or an API request fails.
