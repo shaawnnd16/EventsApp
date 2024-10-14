@@ -11,9 +11,10 @@ import MapKit
 struct EventDetailView: View {
     var event: Event
 
-    @EnvironmentObject var favorites: FavoritesManager // Access the shared favorites manager
+    @EnvironmentObject var favorites: FavoritesManager
     @State private var showMapDirections = false
     @State private var mapItem: MKMapItem?
+    @State private var showShareSheet = false // State for showing the share sheet
 
     var body: some View {
         ScrollView {
@@ -38,7 +39,7 @@ struct EventDetailView: View {
                             }
                         }
                     )
-                
+
                 // Event Information
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Date: \(event.dates.start.localDate)")
@@ -54,12 +55,17 @@ struct EventDetailView: View {
                     }
 
                     // Map showing event location
-                    if let latitude = Double(event._embedded.venues.first?.location.latitude ?? ""),
-                       let longitude = Double(event._embedded.venues.first?.location.longitude ?? "") {
-                        
+                    if let latitudeString = event._embedded.venues.first?.location.latitude,
+                       let longitudeString = event._embedded.venues.first?.location.longitude,
+                       let latitude = Double(latitudeString),
+                       let longitude = Double(longitudeString) {
+
                         // Interactive MapView showing event location
                         MapView(coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
-                        
+                            .frame(height: 200)
+                            .cornerRadius(10)
+                            .padding(.vertical, 10)
+
                         // Directions Button
                         Button(action: {
                             openMaps(latitude: latitude, longitude: longitude, venueName: event._embedded.venues.first?.name)
@@ -88,7 +94,7 @@ struct EventDetailView: View {
                     Text("Event Description")
                         .font(.headline)
                         .padding(.top, 10)
-                    Text(eventDescription() ?? "This is a placeholder for the event description. Replace with real data.")
+                    Text(event.description ?? "This is a placeholder for the event description. Replace with real data.")
                         .font(.body)
                         .foregroundColor(.secondary)
 
@@ -109,6 +115,11 @@ struct EventDetailView: View {
                             .cornerRadius(10)
                             .shadow(radius: 5)
                         }
+                    } else {
+                        Text("No tickets available")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .padding(.vertical, 10)
                     }
                 }
                 .padding()
@@ -134,7 +145,7 @@ struct EventDetailView: View {
 
                     // Share Button
                     Button(action: {
-                        shareEvent(event)
+                        showShareSheet.toggle() // Trigger share sheet
                     }) {
                         Image(systemName: "square.and.arrow.up")
                             .font(.title)
@@ -152,6 +163,9 @@ struct EventDetailView: View {
         }
         .navigationTitle("Event Details")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showShareSheet) {
+            ShareSheet(activityItems: ["Check out this event: \(event.name) on \(event.dates.start.localDate)"])
+        }
     }
 
     // Function to handle opening maps for directions
@@ -169,26 +183,12 @@ struct EventDetailView: View {
     private func openTicketmasterPage(url: URL) {
         UIApplication.shared.open(url)
     }
-
-    // Function to share event details
-    private func shareEvent(_ event: Event) {
-        let activityController = UIActivityViewController(
-            activityItems: ["Check out this event: \(event.name) on \(event.dates.start.localDate)"],
-            applicationActivities: nil
-        )
-
-        // Present the activity controller
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            windowScene.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)
-        }
-    }
-
-    // Optional description function
-    private func eventDescription() -> String? {
-        // Replace with real description data
-        return nil
-    }
 }
+
+
+
+
+
 
 
 

@@ -6,19 +6,24 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct NeighborhoodEventsTrackerApp: App {
-    // StateObject to manage shared FavoritesManager across views
-    @StateObject private var favorites = FavoritesManager()
-
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainTabView()
-                .environmentObject(favorites) // Pass the shared favorites manager to all views
+                .environmentObject(FavoritesManager())  // Provide FavoritesManager here
         }
     }
 }
+
+
+
 
 
 

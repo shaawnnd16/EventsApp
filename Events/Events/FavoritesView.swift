@@ -8,25 +8,33 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @EnvironmentObject var favorites: FavoritesManager // Use the shared favorites manager
+    @EnvironmentObject var favorites: FavoritesManager
+    @State private var favoritedEvents: [Event] = []
 
     var body: some View {
         NavigationView {
-            if favorites.favoriteEvents.isEmpty {
-                Text("No favorite events yet!")
-                    .foregroundColor(.gray)
-                    .padding()
-            } else {
-                List(favorites.favoriteEvents) { event in
-                    NavigationLink(destination: EventDetailView(event: event)) {
-                        Text(event.name)
-                    }
+            List(favoritedEvents) { event in
+                VStack(alignment: .leading) {
+                    Text(event.name)
+                        .font(.headline)
+                    Text(event.dates.start.localDate)
+                        .font(.subheadline)
+                    Text(event.venueInfo)
+                        .font(.subheadline)
                 }
-                .navigationTitle("Favorites")
+            }
+            .navigationTitle("Favorite Events")
+            .onAppear {
+                // Load favorites from Firestore
+                favorites.loadFavorites()
+                favoritedEvents = favorites.favoriteEvents
             }
         }
     }
 }
+
+
+
 
 
 
